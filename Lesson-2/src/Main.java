@@ -1,5 +1,4 @@
 import java.util.Scanner; // Подключение библиотеки
-import java.io.*; // Подключение всех библиотек io
 
 public class Main {
     public static void main(String[] args)
