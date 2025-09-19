@@ -51,7 +51,7 @@ public class Main {
 //        System.out.printf("Введите число - от 1 до 9");
 //        x1 = scanner.nextInt();
         System.out.println();
-        
+
         for(i = 1; i <= 1000; i++)
         {
             if(i % 3 == 0 || i % 5 == 0 || i % 15 == 0)
