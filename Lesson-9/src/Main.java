@@ -42,13 +42,38 @@ public class Main {
 
         // Ввусти элементы массива. Вусти число х1.
         // Вывести число от 0 до х1, далее вывести квадрат числа х1 и далее вывести элеметны от х1 до n
-        System.out.printf("Введите %d чисел", n);
-        for(i = 0; i < n; i++)
+//        System.out.printf("Введите %d чисел", n);
+//        for(i = 0; i < n; i++)
+//        {
+//            A[i] = scanner.nextInt();
+//            System.out.printf("%d \n", A[i]);
+//        }
+//        System.out.printf("Введите число - от 1 до 9");
+//        x1 = scanner.nextInt();
+        System.out.println();
+        
+        for(i = 1; i <= 1000; i++)
         {
-            A[i] = scanner.nextInt();
-            System.out.printf("%d \n", A[i]);
+            if(i % 3 == 0 || i % 5 == 0 || i % 15 == 0)
+            {
+                if(i % 3 == 0)
+                {
+                    System.out.printf(" fizz");
+                }
+                if(i % 5 == 0)
+                {
+                    System.out.printf(" buzz");
+                }
+                if(i % 15 == 0)
+                {
+                    System.out.printf(" hiss");
+                }
+                continue;
+            }
+            else
+            {
+                System.out.printf(" %d", i);
+            }
         }
-        System.out.printf("Введите число - от 1 до 9");
-        x1 = scanner.nextInt();
     }
 }
