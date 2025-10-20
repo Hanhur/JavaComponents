@@ -12,5 +12,7 @@ public class Main {
         b.multiply();
         a.kv();
         b.kv();
+
+        AbstractAnimals ab = new AbstractAnimals();
     }
 }
