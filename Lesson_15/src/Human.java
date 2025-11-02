@@ -45,7 +45,7 @@ public class Human {
     {
         this.address = address;
     }
-
+// ======================================================================================================
     public String getFio()
     {
         return fio;
@@ -74,5 +74,11 @@ public class Human {
     public String getAddress()
     {
         return address;
+    }
+
+    public String getAnketa()
+    {
+        String anketa = "Анкета программиста\n" + "Фамилия: " + fio + "\nДата рождения: " + date + "\nТелефон: " + tel + "\nСтрана: " + country + "\nГород: " + city + "\nАдрес: " + address;
+        return anketa;
     }
 }

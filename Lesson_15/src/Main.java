@@ -43,7 +43,7 @@ public class Main {
 
         personId1.setData(fio, date, tel, country, city, address);
 
-        System.out.printf("Какой параметр вывести: 1 - ФИО, 2 - Дата рождения");
+        System.out.printf("Какой параметр вывести: 1 - ФИО, 2 - Дата рождения, 3 - Телефон, 4 - Страна, 5 - Город, 6 - Адрес, 7 - Анкета");
 
         f = scanner.nextInt();
 
@@ -55,6 +55,7 @@ public class Main {
             case 4: System.out.printf("Страна - %s\n", personId1.getCountry()); break;
             case 5: System.out.printf("Город - %s\n", personId1.getCity()); break;
             case 6: System.out.printf("Адрес - %s\n", personId1.getAddress()); break;
+            case 7: System.out.printf("Анкета - %s\n", personId1.getAnketa()); break;
             default: System.out.printf("Error\n");
         }
     }
