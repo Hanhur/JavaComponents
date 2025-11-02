@@ -21,6 +21,31 @@ public class Human {
         this.fio = fio;
     }
 
+    public void setDataDate(String date)
+    {
+        this.date = date;
+    }
+
+    public void setDataTel(String tel)
+    {
+        this.tel = tel;
+    }
+
+    public void setDataCountry(String country)
+    {
+        this.country = country;
+    }
+
+    public void setDataCity(String city)
+    {
+        this.city = city;
+    }
+
+    public void setDataAddress(String address)
+    {
+        this.address = address;
+    }
+
     public String getFio()
     {
         return fio;
