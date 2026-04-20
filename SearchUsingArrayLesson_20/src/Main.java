@@ -119,7 +119,7 @@ public class Main {
         }
          */
         // ================================================================================
-
+        /*
         int n = 4, m = 5;
         int[][] Matrix = new int[n][m];
 
@@ -135,9 +135,44 @@ public class Main {
         {
             for (int j = 0; j < m; j++)
             {
-                System.out.printf("%d ",  Matrix[i][j]);
+                System.out.printf("%d ", Matrix[i][j]);
             }
             System.out.printf("\n");
+        }
+         */
+        // ======================================================================================
+
+        int n = 4, m = 5, k = 0, sum;
+        int[][] Matrix = new int[n][m];
+
+        for(int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                k++;
+                Matrix[i][j] = k;
+            }
+        }
+
+        for(int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                System.out.printf("%d ", Matrix[i][j]);
+            }
+            System.out.printf("\n");
+        }
+
+        // ======================================================================
+
+        for (int i = 0; i < n; i++)
+        {
+            sum = 0;
+            for (int j = 0; j < m; j++)
+            {
+                sum += Matrix[i][j];
+            }
+            System.out.printf("\nСумма строки номер %d равна = %d", i, sum);
         }
     }
 }
