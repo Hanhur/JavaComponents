@@ -131,5 +131,43 @@ public class Main {
         {
             System.out.printf("%d ", E[i]);
         }
+
+// ====================================================================================================================
+
+        Random r = new Random();
+        int nnn;
+
+        System.out.print("\nВведите размерность массива\n");
+        nnn = scanner.nextInt();
+        int[] F = new int[nnn];
+        numMin = 0;
+        numMax = 33;
+
+        for (int i = 0; i < nn; i++)
+        {
+            F[i] = r.nextInt((numMax - numMin) + 1) + numMin;
+        }
+
+        System.out.printf("\nИсходный массив\n");
+        for (int i = 0; i < nnn; i++)
+        {
+            System.out.printf("%d ", F[i]);
+        }
+
+        for (int i = 1; i < nnn - 1; i++)
+        {
+            if (F[i - 1] != 0 && F[i + 1] != 0 && F[i] != 0 && F[i] % F[i - 1] == 0 && F[i + 1] % F[i] == 0) System.out.printf("%d", F[i]);
+        }
+
+// ====================================================================================================================
+
+        int[] G = new int[] {1,2,44,12,7,8,7,12,4,2,1};
+        flag = 1;
+        for (int i = 0; i < G.length / 2; i++)
+        {
+            if (G[i] != G[G.length - i]) flag = 0;
+        }
+        if (flag == 1) System.out.print("\nYes - массив симметричный");
+        else System.out.print("\nNo - массив несимметричный");
     }
 }
