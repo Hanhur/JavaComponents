@@ -1,10 +1,41 @@
 import java.awt.*;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        int numMin = 2, numMax = 40, temp, j;
+        int n = random.nextInt((numMax - numMin) + 1) + numMin;
+        int[] arr = new int[n];
+
+        System.out.printf("\n Length of Array arr is = %d", arr.length);
+        numMin = -10;
+        numMax = 150;
+
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = random.nextInt((numMax - numMin) + 1) + numMin;
+        }
+
+        for (int i = 1; i < arr.length; i++)
+        {
+            temp = arr[i]; // Скопировать помеченный элемент
+            j = i; // Начать перемещения с i
+            while (j > 0 && arr[j - 1] >= temp) // Пока не найден меньший элемент
+            {
+                arr[j] = arr[j - 1]; // Сдвинуть элемент вправо
+                --j; // Перейти на одну позицию влево
+            }
+            arr[j] = temp; // Вставить помеченный элемент
+        }
+        System.out.println("\n\narr after sort = " + Arrays.toString(arr));
+
+        /*
         int area, perimeter;
 
         Point A = new Point(10, 5);
@@ -27,6 +58,7 @@ public class Main {
         Point pointCenter = new Point();
         pointCenter = objRect.centerRectangle();
         System.out.printf("\nКоордината центра = (%d,%d)", pointCenter.x, pointCenter.y);
+         */
     }
 }
 
